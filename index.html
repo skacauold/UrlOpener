@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Url Opener</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+            <style>
+                .porm {
+                    margin-top:30px ;
+                    margin-left:60px ;
+                    margin-right: ;
+                    margin-bottom: ;
+                }
+                .submit {
+                    margin-top:20px ;
+                    margin-left: ;
+                    margin-right: ;
+                    margin-bottom: ;
+                }
+                .h1 {
+                    margin-top:20px ;
+                    margin-left:60 ;
+                    margin-right: ;
+                    margin-bottom: ;
+                }
+                .gabut {
+                    margin-top:20px ;
+                    margin-left:60 ;
+                    margin-right: ;
+                    margin-bottom: ;
+                }
+                .kopiright {
+                    margin-top:20px ;
+                    margin-left:60 ;
+                    margin-right: ;
+                    margin-bottom: ;
+                }
+            </style>
+                    <body>
+                        <h1 class="h1">URL Opener / Pembuka URL</h1>
+                        <p class="gabut">Ini Adalah Url Opener Yang Di Buat Untuk Kebutuhan Para Orang Malas Yang Malas Klik Satu Persatu Domain, Domain Bulk Opener</p>
+                        <form method="post" class="porm">
+                        <textarea name="urlnya" id="urlnya" cols="150" rows="11" placeholder="Masukan List URL seperti domain.com Berderet Kebawah" class="border border-primary"></textarea><br><br>
+                        <input value="Open URL" class="btn btn-primary btn-sm" class="submit" type="button" onClick="openkabeh();">
+                        <input type="reset" value="Reset" class="btn btn-primary btn-sm">
+                        </form>
+                        <p class="kopiright">&copy; 2020 Maxteroit || Made With ❤ From <a href="https://github.com/fikriiazz/">Fikriiazz</a></p>
+                    <script>
+                        function openkabeh() {
+                            debugger;
+                            var urls = document.getElementById("urlnya").value;
+                            var urls = urls.split('\n');
+                            var totalno = urls.length;
+                            var s;
+                            for (var i = 0; i < totalno; i++) {
+                                s = urls[i];
+                                if (s) {
+                                    if (s.substr(0, 7) != 'http://' && s.substr(0, 8) != 'https://')
+                                        s = 'http://' + s;
+                                    window.open(s);
+                                }
+                            }
+                            return false;
+                        }
+                    </script>
+                    </body>
+</html>
